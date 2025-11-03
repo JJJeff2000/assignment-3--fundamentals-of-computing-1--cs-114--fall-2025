@@ -13,14 +13,13 @@ public class Diamond {
     Scanner scanner = new Scanner(System.in);
     scan_p("Enter a positive number: ");
     int numberInput = scanner.nextInt();
+    int rowCount = 0;
+    int starCount = 1;
     if (numberInput % 2 == 0){
       p("Even Input");
     }
     else{
-      p("Odd Input");
       int halfInput = numberInput / 2;
-      int rowCount = 0;
-      int starCount = 1;
       for (int j = (numberInput - 1); j > halfInput; j--) {
         for (int i = halfInput; i > rowCount; i--) {
           scan_p(" ");
