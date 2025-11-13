@@ -15,7 +15,7 @@ public class RunMatrix {
       p("1. Build Matrix \n");
       p("2. Populate Matrix \n");
       p("3. Print Matrix \n");
-      p("4. Swap Matrix \n");
+      p("4. Flip Matrix \n");
       p("5. Quit\n");
       p("What would you like to do?: ");
       input = scanner.nextLine();
@@ -28,14 +28,16 @@ public class RunMatrix {
           break;
         case "2", "populate matrix":
           p("Populating Matrix... \n");
+          myMatrix.populateMatrix();
+          p("Matrix Populated. \n");
           break;
         case "3", "print matrix":
           myMatrix.printMatrix();
           break;
-        case "4", "swap matrix":
-          p("Swapping Matrix... \n");
-          myMatrix.swapMatrix();
-          p("Matrix Swap Successful. \n");
+        case "4", "flip matrix":
+          p("Flipping Matrix... \n");
+          myMatrix.flipMatrix();
+          p("Matrix Flipped Successful. \n");
           break;
         case "5", "quit":
           p("Goodbye. \n");
