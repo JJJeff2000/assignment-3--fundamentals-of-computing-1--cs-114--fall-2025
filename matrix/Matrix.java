@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class Matrix {
-  public static void p(String value){
+
+  public static void p(String value) {
     System.out.print(value);
   }
 
@@ -19,8 +20,8 @@ public class Matrix {
     p("Please enter the size of the matrix: ");
     size = scanner.nextInt();
     matrix = new int[size][size];
-    for(int i = 0; i < size; i++){
-      for(int j = 0; j < size; j++){
+    for(int i = 0; i < size; i++) {
+      for(int j = 0; j < size; j++) {
         matrix[i][j] = 0;
       }
     }
@@ -34,24 +35,24 @@ public class Matrix {
     }
   }
 
-  public void printMatrix(){
+  public void printMatrix() {
     int xTemp = 0;
-    int yTemp = size-1;
+    int yTemp = size - 1;
     for (int i = 0; i < matrix.length; i++) {
       for (int j = 0; j < matrix[i].length; j++) {
         if (matrix[i][j] < 10) {
-          if (i == xTemp && j == yTemp){
+          if (i == xTemp && j == yTemp) {
             p(RED + matrix[i][j] + "  " + RESET);
           }
-          else{
+          else {
             p(matrix[i][j] + "  ");
           }
         }
         else {
-          if (i == xTemp && j == yTemp){
+          if (i == xTemp && j == yTemp) {
             p(RED + matrix[i][j] + " " + RESET);
           }
-          else{
+          else {
             p(matrix[i][j] + " ");
           }
         }
@@ -62,17 +63,21 @@ public class Matrix {
     }
   }
 
-  private void swapMatrix(){
-    int x2 = matrix.length-x2Temp;
-    int y2 = matrix.length-y2Temp;
+  private void swapMatrix(int x1, int y1, int x2, int y2) {
     int temp = matrix[x1][y1];
     matrix[x1][y1] = matrix[x2][y2];
     matrix[x2][y2] = temp;
   }
 
   public void flipMatrix() {
-    int xMidPoint = 0;
-    int yMidPoint = size-1;
-    swapMatrix();
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        if (i + j != size - 1 && j < size - 1 - i) {
+          int x2 = size - 1 - j;
+          int y2 = size - 1 - i;
+          swapMatrix(i, j, x2, y2);
+        }
+      }
+    }
   }
 }

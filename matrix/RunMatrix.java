@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class RunMatrix {
-  public static void p(String value){
+  public static void p(String value) {
     System.out.print(value);
   }
 
@@ -37,7 +37,7 @@ public class RunMatrix {
         case "4", "flip matrix":
           p("Flipping Matrix... \n");
           myMatrix.flipMatrix();
-          p("Matrix Flipped Successful. \n");
+          p("Matrix Flip Successful. \n");
           break;
         case "5", "quit":
           p("Goodbye. \n");
@@ -48,5 +48,6 @@ public class RunMatrix {
           break;
       }
     }
+    scanner.close();
   }
 }

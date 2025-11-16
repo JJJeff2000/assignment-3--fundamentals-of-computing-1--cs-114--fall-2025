@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class Diamond {
 // Function to print a line with a newline
-  public static void pln(String value){
+  public static void pln(String value) {
     System.out.println(value);
   }
 // Function to print a line without a newline
-  public static void p(String value){
+  public static void p(String value) {
     System.out.print(value);
   }
 // Main method
@@ -21,13 +21,13 @@ public class Diamond {
     int numberInput = scanner.nextInt();
     int halfInput = numberInput / 2;
 // Print even diamond
-    if (numberInput % 2 == 0){
-      for (int i = (numberInput + 1); i > halfInput; i--){
-        for (int j = (numberInput - 1); j > rowCount; j--){
+    if (numberInput % 2 == 0) {
+      for (int i = (numberInput + 1); i > halfInput; i--) {
+        for (int j = (numberInput - 1); j > rowCount; j--) {
           p(" ");
         }
-        for (int j = starCount; j > 0; j--){
-          if (rowCount < 1){
+        for (int j = starCount; j > 0; j--) {
+          if (rowCount < 1) {
             p(" *");
           }
           else {
@@ -36,7 +36,7 @@ public class Diamond {
         }
         pln("");
         starCount += 2;
-        if (rowCount < 1){
+        if (rowCount < 1) {
           rowCount++;
         }
         else {
@@ -44,16 +44,16 @@ public class Diamond {
         }
       }
       starCount = (numberInput -1);
-      for (int i = numberInput; i > halfInput; i--){
-        for (int j = (numberInput - 1); j < rowCount; j++){
+      for (int i = numberInput; i > halfInput; i--) {
+        for (int j = (numberInput - 1); j < rowCount; j++) {
           p(" ");
         }
-        for (int j = starCount; j > 0; j--){
+        for (int j = starCount; j > 0; j--) {
           p("* ");
         }
         pln("");
         starCount -= 2;
-        if (rowCount < 1){
+        if (rowCount < 1) {
           rowCount++;
         }
         else {
@@ -61,7 +61,7 @@ public class Diamond {
         }
       }
     }
-    else{
+    else {
 // Print odd diamond
       for (int k = (numberInput - 1); k > halfInput; k--) {
         for (int l = halfInput; l > rowCount; l--) {
