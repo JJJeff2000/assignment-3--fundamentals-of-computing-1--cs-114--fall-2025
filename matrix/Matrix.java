@@ -8,10 +8,6 @@ public class Matrix {
 
   int[][] matrix;
   int size;
-  int x1 = 0;
-  int y1 = 0;
-  int x2Temp = 1;
-  int y2Temp = 1;
   public static final String RED = "\u001B[31m";
   public static final String RESET = "\u001B[0m";
 
