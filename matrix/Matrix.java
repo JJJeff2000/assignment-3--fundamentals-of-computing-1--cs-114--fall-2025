@@ -69,8 +69,8 @@ public class Matrix {
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
         if (i + j != size - 1 && j < size - 1 - i) {
-          int x2 = size - 1 - j;
-          int y2 = size - 1 - i;
+          int x2 = size - 1 - i;
+          int y2 = size - 1 - j;
           swapMatrix(i, j, x2, y2);
         }
       }
