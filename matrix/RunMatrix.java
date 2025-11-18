@@ -10,6 +10,7 @@ public class RunMatrix {
     p("Building Matrix... \n");
     myMatrix.buildMyMatrix();
     p("Matrix Build Successful. \n");
+    myMatrix.printMatrix();
     p("Populating Matrix... \n");
     myMatrix.populateMatrix();
     p("Matrix Populated. \n");
