@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class RunMatrix {
   public static void p(String value) {
     System.out.print(value);
